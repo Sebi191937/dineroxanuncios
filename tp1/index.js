@@ -5,8 +5,13 @@ const cors = require('cors');
 
 const app = express();
 
+app.use(cors())
 // Middleware
-app.use(cors());
+app.use(cors({
+  origin: 'https://sebi191937.github.io', // <-- tu frontend
+  methods: ['GET', 'POST'],
+  allowedHeaders: ['Content-Type']
+}));
 app.use(bodyParser.json());
 
 // Conectar a MongoDB
