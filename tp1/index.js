@@ -8,7 +8,7 @@ const app = express();
 app.use(cors())
 // Middleware
 app.use(cors({
-  origin: 'https://sebi191937.github.io', // <-- tu frontend
+  origin: 'https://sebi191937.github.io/dineroxanuncios/', // <-- tu frontend
   methods: ['GET', 'POST'],
   allowedHeaders: ['Content-Type']
 }));
